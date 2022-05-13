@@ -15,4 +15,4 @@ jobs:
           https://api.github.com/repos/CeliaDoolaeghe/sfeir-school-github-actions/issues \
           -d '{"title": "Issue on commit $SHORT_SHA", "body": "Created by a Github Action"}'
         env:
-          SHORT_SHA: ${GITHUB_SHA::7}
+          SHORT_SHA: ${{ GITHUB_SHA::7 }}
