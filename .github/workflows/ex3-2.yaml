@@ -13,7 +13,7 @@ jobs:
         run: |
           echo "short sha: ${{ steps.reduce_sha.outputs.short_sha }}"
           curl \
-          -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/CeliaDoolaeghe/sfeir-school-github-actions/issues \
-          -d '{"title": "Issue on commit ${{ steps.reduce_sha.outputs.short_sha }}", "body": "Created by a Github Action"}'
+            -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/CeliaDoolaeghe/sfeir-school-github-actions/issues \
+            -d '{"title":"Issue on commit ${{ steps.reduce_sha.outputs.short_sha }}"}'
