@@ -9,7 +9,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - id: set-matrix
-        run: echo "::set-output name=matrix::{\"include\":[{\"os\":\"ubuntu-latest\",\"version\":lts},{\"os\":\"ubuntu-latest\",\"version\":14},{\"os\":\"ubuntu-latest\",\"version\":12},{\"os\":\"ubuntu-18.04\",\"version\":lts},{\"os\":\"ubuntu-18.04\",\"version\":14}]}"
+        run: echo "::set-output name=matrix::{\"include\":[{\"os\":\"ubuntu-latest\",\"version\":\"lts/*\"},{\"os\":\"ubuntu-latest\",\"version\":\"14\"},{\"os\":\"ubuntu-latest\",\"version\":\"12\"},{\"os\":\"ubuntu-18.04\",\"version\":\"lts/*\"},{\"os\":\"ubuntu-18.04\",\"version\":\"14\"}]}"
   run-npm-install:
     needs: set-matrix
     strategy:
