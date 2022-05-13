@@ -3,7 +3,7 @@ on:
   pull_request:
 
 jobs:
-  run-npm-test:
+  interact_with_giithub_api:
     runs-on: ubuntu-latest
     steps:
       - name: "Create issue"
@@ -11,7 +11,7 @@ jobs:
           curl \
           -X POST \
           -H "Accept: application/vnd.github.v3+json" \
-          /repos/CeliaDoolaeghe/sfeir-school-github-actions/issues \
+          https://api.github.com/repos/CeliaDoolaeghe/sfeir-school-github-actions/issues \
           -d '{"title": "$SHORT_SHA", "body": "Created by a Github Action"}'
         env:
           SHORT_SHA: ${GITHUB_SHA::7}
