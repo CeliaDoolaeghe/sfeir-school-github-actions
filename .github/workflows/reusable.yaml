@@ -6,6 +6,7 @@ on:
       node_version:
         required: true
         type: string
+        default: 'lts/*'
 
 jobs:
   run-npm-test:
