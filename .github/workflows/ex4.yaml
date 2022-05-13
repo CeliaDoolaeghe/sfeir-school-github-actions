@@ -1,0 +1,9 @@
+name: Run node tests
+on:
+  workflow_dispatch:
+
+jobs:
+  run-npm-test:
+    uses: "./reusable.yaml@main"
+    with:
+      node_version: 'lts/*'
