@@ -6,4 +6,4 @@ jobs:
   run-npm-test:
     uses: "./.github/workflows/reusable.yaml"
     with:
-      node_version: 'lts/*'
+      node_version: '14'
