@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Reduce SHA"
-        run: echo '::set-output name=short_sha::${GITHUB_SHA::7}'
+        run: echo "::set-output name=short_sha::${GITHUB_SHA::7}"
         id: "reduce_sha"
       - name: "Create issue"
         run: |
